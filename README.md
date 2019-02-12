@@ -1,4 +1,4 @@
-## Deploting Kubernetes On A Local Machine
+## Deploying Kubernetes On A Local Machine
 
 #### Machine Configuration Used
 * Ubunto 18.04
@@ -10,7 +10,7 @@
 * Minikube
 * Docker
 
-#### Steps:
+#### By Docker Image:
 * **Step 1: Creating a local kuberntes cluster by minikube**
 ```bash
 minikube start 
@@ -33,3 +33,35 @@ kubectl expose deployment task-app --type=NodePort --port=8080
 minikube service task-app
 ```
 This opens the browser window and displays "Hello World"
+
+---------------------------
+
+#### By Deployment file : 
+The image reaining the same.
+* **Step 1: Defining deployment.yaml file**
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: task-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: task-app
+    spec:
+      containers:
+      - name: task-app
+        image: task-app-image:v2
+        ports:
+        - containerPort: 5000
+```
+* **Step 2: Creating deployment **
+```bash
+kubectl create -f deployment.yaml
+```
+
