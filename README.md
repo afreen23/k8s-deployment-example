@@ -1,17 +1,17 @@
 # Deploying Kubernetes On A Local Machine
 
 Deploying a nodejs server app container on Kubernetes using minikube
-### Machine Configuration Used
+## Machine Configuration Used
 * Ubunto 18.04
 * 8 Gb RAM
 * Intel Core i5 (8th gen)
 
-### Tools Required
+## Tools Required
 * kubectl: cli tool to manage K8s cluster
 * Minikube :  a tool to spin k8s cluster(single node)on a local machine
 * Docker : for containerizing app
 
-### By Docker Image:
+## Deploying By Docker Image:
 * **Step 1: Creating a local kuberntes cluster by minikube**
 ```bash
 minikube start  // starts a kubernetes cluster with one node
@@ -38,9 +38,9 @@ This opens the browser window and displays "Hello World"
 
 ---------------------------
 
-### By Deployment file : 
+## Deploying by yaml file : 
 The image and app remaining the same i.e "task-app-image:v1" and "task-app"
-* **Step 1: Defining deployment.yaml file**
+* **Step 1: Defining _deployment.yaml_ file**
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
