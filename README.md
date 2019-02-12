@@ -78,3 +78,16 @@ kubectl get deployments
 ```bash
 kubectl get pods
 ```
+
+### Deleting Deployments
+```bash
+kubectl delete deployment task-app
+```
+### Deleting Services
+```bash
+kubectl delete service task-app
+```
+### Stopping Minikube VM
+```bash
+minikube stop
+```
