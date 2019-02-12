@@ -9,13 +9,13 @@ Deploying a nodejs server app container on Kubernetes using minikube
 ### Tools Required
 * kubectl: cli tool to manage K8s cluster
 * Minikube :  a tool to spin k8s cluster(single node)on a local machine
-* Docker : for conatinerizing app
+* Docker : for containerizing app
 
 ### By Docker Image:
 * **Step 1: Creating a local kuberntes cluster by minikube**
 ```bash
 minikube start  // starts a kubernetes cluster with one node
-eval $(minikube docker-env) // to use local images by reusing minikube's buolt in docker-daemon
+eval $(minikube docker-env) // to use local images by reusing minikube's built in docker-daemon
 ```
 * **Step 2: Packaging a simple nodejs server into a docker container image**
 ```bash
@@ -39,7 +39,7 @@ This opens the browser window and displays "Hello World"
 ---------------------------
 
 ### By Deployment file : 
-The image remaining the same i.e "task-app-image:v1"
+The image and app remaining the same i.e "task-app-image:v1" and "task-app"
 * **Step 1: Defining deployment.yaml file**
 ```yaml
 apiVersion: apps/v1
