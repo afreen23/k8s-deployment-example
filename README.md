@@ -13,8 +13,8 @@
 #### Steps:
 * **Step 1: Creating a local kuberntes cluster by minikube**
 ```bash
-minikube start
-eval $(minikube docker-env)
+minikube start 
+eval $(minikube docker-env) 
 ```
 * **Step 2: Packaging a simple nodejs server into a docker container image**
 ```bash
@@ -26,7 +26,7 @@ kubectl create deployment task-app --image=task-app-image:v1
 ```
 * **Step 5: Exposing the pod as a service**
 ```bash
-kubectl expose deployment task-app --type=LoadBalancer --port=8080
+kubectl expose deployment task-app --type=NodePort --port=8080
 ```
 * **Step 6: Running the nodejs server on the kubernetes cluster**
 ```bash
