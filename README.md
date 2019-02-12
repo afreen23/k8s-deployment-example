@@ -60,7 +60,7 @@ spec:
         ports:
         - containerPort: 5000
 ```
-* **Step 2: Creating deployment **
+* **Step 2: Creating deployment**
 ```bash
 kubectl create -f deployment.yaml
 ```
