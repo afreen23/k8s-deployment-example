@@ -11,7 +11,7 @@
 * Docker
 
 #### By Docker Image:
-* **Step 1: Creating a local kuberntes cluster by minikube**
+* **Step 1:Creating a local kuberntes cluster by minikube**
 ```bash
 minikube start 
 eval $(minikube docker-env) 
