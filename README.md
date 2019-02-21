@@ -11,13 +11,10 @@ Deploying a nodejs server app container on Kubernetes using minikube
 * Minikube :  a tool to spin k8s cluster(single node)on a local machine
 * Docker : for containerizing app
 
-<<<<<<< HEAD
-#### By Docker Image:
-* **Step 1:Creating a local kuberntes cluster by minikube**
-=======
+
 ## Deploying By Docker Image:
 * **Step 1: Creating a local kuberntes cluster by minikube**
->>>>>>> 85b8c92a9f9f6182068612c2fb91e9e28a2d21a6
+
 ```bash
 minikube start  // starts a kubernetes cluster with one node
 eval $(minikube docker-env) // to use local images by reusing minikube's built in docker-daemon
